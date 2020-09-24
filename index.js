@@ -75,8 +75,8 @@ Your function should remove a flavor from the end of the array and console.log t
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/
 
-function removeLastFlavor() {
-  originalFlavors.pop();
+function removeLastFlavor(arr) {
+  arr.pop();
 }
 removeLastFlavor();
 console.log(originalFlavors);
@@ -91,7 +91,7 @@ Your function should accept:
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
 function getFlavorByIndex(index) {
-  return (indexFlavor = originalFlavors[index]);
+  return originalFlavors[index];
 }
 console.log(getFlavorByIndex(2));
 
@@ -122,7 +122,7 @@ Your function should accept:
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
 function copy(arr) {
-  let clone = arr.slice();
+  let clone = [...arr];
   return clone;
 }
 console.log(copy(originalFlavors));
